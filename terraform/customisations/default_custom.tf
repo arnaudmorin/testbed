@@ -26,6 +26,8 @@ package_update: true
 package_upgrade: true
 runcmd:
   - "echo 'network: {config: disabled}' > /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg"
+  - "systemctl stop apparmor"
+  - "systemctl disable apparmor"
 final_message: "The system is finally up, after $UPTIME seconds"
 EOT
 }

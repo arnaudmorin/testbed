@@ -12,7 +12,7 @@ apt-get update
 apt-get install --yes \
   git-lfs \
   python3-argcomplete \
-  python3-crypto \
+  python3-cryptography \
   python3-dnspython \
   python3-jmespath \
   python3-kerberos \

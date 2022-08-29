@@ -89,8 +89,16 @@ write_files:
 
     path: /root/run-manager.sh
     permissions: '0700'
+  - content: |
+      Package: containerd.io
+      Pin: version 1.6.4-1
+      Pin-Priority: 1001
+    path: /etc/apt/preferences.d/containerd
+    permissions: '0644'
 runcmd:
   - "echo 'network: {config: disabled}' > /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg"
+  - "systemctl stop apparmor"
+  - "systemctl disable apparmor"
   - "/root/run-manager.sh"
 final_message: "The system is finally up, after $UPTIME seconds"
 power_state:
