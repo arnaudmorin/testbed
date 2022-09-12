@@ -13,7 +13,7 @@
     basepath: "{{ ansible_user_dir }}/src/github.com/osism/testbed"
     cloud_env: betacloud-ci
 
-    version_ceph_next: pacific
+    version_ceph_next: quincy
     version_manager_next: latest
     version_openstack_next: yoga
 

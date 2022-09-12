@@ -41,9 +41,9 @@
     merge-mode: squash-merge
     check:
       jobs:
-        - tox-docs
-        - tox-linters
-        - testbed-deploy
+        # - tox-docs
+        # - tox-linters
+        # - testbed-deploy
         - testbed-upgrade
     gate:
       jobs:
